@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+*.log
+*.pot
+*.pyc
+__pycache__/
+
+.env
+# db.sqlite3 # included as an example
