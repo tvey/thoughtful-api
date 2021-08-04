@@ -1,0 +1,359 @@
+[
+    {
+        "model": "thoughts.tag",
+        "pk": 1,
+        "fields": {
+            "name": "philosophy"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 2,
+        "fields": {
+            "name": "life"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 3,
+        "fields": {
+            "name": "truth"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 4,
+        "fields": {
+            "name": "wisdom"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 5,
+        "fields": {
+            "name": "inspirational"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 6,
+        "fields": {
+            "name": "knowledge"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 7,
+        "fields": {
+            "name": "religion"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 8,
+        "fields": {
+            "name": "love"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 9,
+        "fields": {
+            "name": "freedom"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 10,
+        "fields": {
+            "name": "science"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 11,
+        "fields": {
+            "name": "politics"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 12,
+        "fields": {
+            "name": "education"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 13,
+        "fields": {
+            "name": "friendship"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 14,
+        "fields": {
+            "name": "humor"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 15,
+        "fields": {
+            "name": "understanding"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 16,
+        "fields": {
+            "name": "happiness"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 17,
+        "fields": {
+            "name": "belief"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 18,
+        "fields": {
+            "name": "reason"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 19,
+        "fields": {
+            "name": "power"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 20,
+        "fields": {
+            "name": "nature"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 21,
+        "fields": {
+            "name": "communism"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 22,
+        "fields": {
+            "name": "music"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 23,
+        "fields": {
+            "name": "fear"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 24,
+        "fields": {
+            "name": "war"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 25,
+        "fields": {
+            "name": "society"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 26,
+        "fields": {
+            "name": "skepticism"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 27,
+        "fields": {
+            "name": "god"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 28,
+        "fields": {
+            "name": "history"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 29,
+        "fields": {
+            "name": "books"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 30,
+        "fields": {
+            "name": "individuality"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 31,
+        "fields": {
+            "name": "work"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 32,
+        "fields": {
+            "name": "courage"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 33,
+        "fields": {
+            "name": "change"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 34,
+        "fields": {
+            "name": "contentment"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 35,
+        "fields": {
+            "name": "death"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 36,
+        "fields": {
+            "name": "doubt"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 37,
+        "fields": {
+            "name": "morality"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 38,
+        "fields": {
+            "name": "intelligence"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 39,
+        "fields": {
+            "name": "learning"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 40,
+        "fields": {
+            "name": "people"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 41,
+        "fields": {
+            "name": "self-determination"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 42,
+        "fields": {
+            "name": "art"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 43,
+        "fields": {
+            "name": "trust"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 44,
+        "fields": {
+            "name": "strength"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 45,
+        "fields": {
+            "name": "self-discovery"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 46,
+        "fields": {
+            "name": "thinking"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 47,
+        "fields": {
+            "name": "independence"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 48,
+        "fields": {
+            "name": "enlightenment"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 49,
+        "fields": {
+            "name": "reading"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 50,
+        "fields": {
+            "name": "logic"
+        }
+    },
+    {
+        "model": "thoughts.tag",
+        "pk": 51,
+        "fields": {
+            "name": "certainty"
+        }
+    }
+]

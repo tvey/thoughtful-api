@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Confucius",
+        "goodreads_slug": "15321.Confucius"
+    },
+    {
+        "name": "Lao Tzu",
+        "goodreads_slug": "2622245.Lao_Tzu"
+    },
+    {
+        "name": "Socrates",
+        "goodreads_slug": "275648.Socrates"
+    },
+    {
+        "name": "Plato",
+        "goodreads_slug": "879.Plato"
+    },
+    {
+        "name": "Aristotle",
+        "goodreads_slug": "2192.Aristotle"
+    },
+    {
+        "name": "Thomas Hobbes",
+        "goodreads_slug": "10122.Thomas_Hobbes"
+    },
+    {
+        "name": "Rene Descartes",
+        "goodreads_slug": "36556.Ren_Descartes"
+    },
+    {
+        "name": "John Locke",
+        "goodreads_slug": "51746.John_Locke"
+    },
+    {
+        "name": "Baruch Spinoza",
+        "goodreads_slug": "122092.Baruch_Spinoza"
+    },
+    {
+        "name": "David Hume",
+        "goodreads_slug": "45726.David_Hume"
+    },
+    {
+        "name": "Jean-Jacques Rousseau",
+        "goodreads_slug": "7994.Jean_Jacques_Rousseau"
+    },
+    {
+        "name": "Immanuel Kant",
+        "goodreads_slug": "11038.Immanuel_Kant"
+    },
+    {
+        "name": "G.W.F. Hegel",
+        "goodreads_slug": "6188.Georg_Wilhelm_Friedrich_Hegel"
+    },
+    {
+        "name": "Soren Kierkegaard",
+        "goodreads_slug": "6172.S_ren_Kierkegaard"
+    },
+    {
+        "name": "Karl Marx",
+        "goodreads_slug": "7084.Karl_Marx"
+    },
+    {
+        "name": "Friedrich Nietzsche",
+        "goodreads_slug": "1938.Friedrich_Nietzsche"
+    },
+    {
+        "name": "Bertrand Russell",
+        "goodreads_slug": "17854.Bertrand_Russell"
+    },
+    {
+        "name": "Ludwig Wittgenstein",
+        "goodreads_slug": "7672.Ludwig_Wittgenstein"
+    },
+    {
+        "name": "Michel Foucault",
+        "goodreads_slug": "1260.Michel_Foucault"
+    },
+    {
+        "name": "Jean-Paul Sartre",
+        "goodreads_slug": "1466.Jean_Paul_Sartre"
+    }
+]

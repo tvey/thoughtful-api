@@ -1,0 +1,242 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "username": "Confucius",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "username": "Lao Tzu",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "username": "Socrates",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 4,
+        "fields": {
+            "username": "Plato",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 5,
+        "fields": {
+            "username": "Aristotle",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 6,
+        "fields": {
+            "username": "Thomas Hobbes",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 7,
+        "fields": {
+            "username": "Rene Descartes",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 8,
+        "fields": {
+            "username": "John Locke",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 9,
+        "fields": {
+            "username": "Baruch Spinoza",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 10,
+        "fields": {
+            "username": "David Hume",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 11,
+        "fields": {
+            "username": "Jean-Jacques Rousseau",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 12,
+        "fields": {
+            "username": "Immanuel Kant",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 13,
+        "fields": {
+            "username": "G.W.F. Hegel",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 14,
+        "fields": {
+            "username": "Soren Kierkegaard",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 15,
+        "fields": {
+            "username": "Karl Marx",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 16,
+        "fields": {
+            "username": "Friedrich Nietzsche",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 17,
+        "fields": {
+            "username": "Bertrand Russell",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 18,
+        "fields": {
+            "username": "Ludwig Wittgenstein",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 19,
+        "fields": {
+            "username": "Michel Foucault",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 20,
+        "fields": {
+            "username": "Jean-Paul Sartre",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 21,
+        "fields": {
+            "username": "philo21",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 22,
+        "fields": {
+            "username": "philo22",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 23,
+        "fields": {
+            "username": "philo23",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 24,
+        "fields": {
+            "username": "philo24",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 25,
+        "fields": {
+            "username": "philo25",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 26,
+        "fields": {
+            "username": "philo26",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 27,
+        "fields": {
+            "username": "philo27",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 28,
+        "fields": {
+            "username": "philo28",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 29,
+        "fields": {
+            "username": "philo29",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 30,
+        "fields": {
+            "username": "philo30",
+            "password": "pbkdf2_sha256$260000$ExTxydSwKBT7KHkRxj6koz$qRLivK2hQWbsUPdvbRRbCXiE4WG77/N1cKc7i1AW6Ko="
+        }
+    }
+]
