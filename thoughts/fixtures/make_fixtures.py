@@ -79,7 +79,7 @@ def make_thoughts(extra=100):
         for thought in author_data:
             real_thought = {
                 'author': author,  # dict
-                'thought': thought['thought'],
+                'text': thought['thought'],
                 'tags': [
                     tag['pk']
                     for tag in tags
@@ -103,7 +103,7 @@ def make_thoughts(extra=100):
             tag_pks = [tag['pk'] for tag in tags]
             fake_thought = {
                 'author': random.choice(fake_authors),
-                'thought': fake.sentence(random.randint(5, 20)),
+                'text': fake.sentence(random.randint(5, 20)),
                 'tags': [random.choice(tag_pks) for _ in range(rand_tag_count)],
             }
             fake_thoughts.append(fake_thought)
@@ -120,7 +120,7 @@ def make_thoughts(extra=100):
             'pk': i,
             'fields': {
                 'author': thought['author']['pk'],
-                'thought': thought['thought'],
+                'text': thought['text'],
                 'is_editable': is_editable,
                 'tags': thought['tags'],
             },
