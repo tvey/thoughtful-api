@@ -3,8 +3,8 @@ from rest_framework import serializers
 from .models import Thought, Tag, User
 
 
-class UserSerializer(serializers.ModelSerializer):
-    thought_count = serializers.SerializerMethodField()
+class AuthorSerializer(serializers.ModelSerializer):
+    thought_count = serializers.SerializerMethodField(read_only=True)
 
     class Meta:
         model = User
@@ -15,14 +15,19 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class TagSerializer(serializers.ModelSerializer):
+    thought_count = serializers.SerializerMethodField(read_only=True)
+
     class Meta:
         model = Tag
-        fields = ['id', 'name']
+        fields = ['id', 'name', 'thought_count']
+
+    def get_thought_count(self, obj):
+        return Thought.objects.filter(tags__in=[obj.id]).count()
 
 
 class ThoughtSerializer(serializers.ModelSerializer):
     author = serializers.StringRelatedField()
-    tags = serializers.StringRelatedField(many=True)
+    tags = serializers.StringRelatedField(many=True, read_only=True)
 
     class Meta:
         model = Thought
