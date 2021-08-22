@@ -2,11 +2,22 @@ from django.urls import path
 
 from rest_framework import routers
 
-from .views import ThoughtViewSet, list_tags, list_authors
+from .views import (
+    ThoughtViewSet,
+    AuthorListAPIView,
+    AuthorDetailAPIView,
+    TagListAPIView,
+    TagDetailAPIView,
+    APIEndpoints,
+)
 
 urlpatterns = [
-    path('tags/', list_tags, name='tags'),
-    path('authors/', list_authors, name='authors'),
+    path('', APIEndpoints.as_view(), name='overview'),
+    path('authors/', AuthorListAPIView.as_view(), name='authors'),
+    path('authors/<int:pk>', AuthorDetailAPIView.as_view(), name='author-detail'),
+    path('tags/', TagListAPIView.as_view(), name='tags'),
+    path('tags/<int:pk>', TagDetailAPIView.as_view(), name='tag-detail-pk'),
+    path('tags/<str:name>', TagDetailAPIView.as_view(), name='tag-detail-name'),
 ]
 
 router = routers.SimpleRouter()

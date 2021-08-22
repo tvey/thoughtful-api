@@ -1,7 +1,11 @@
 # Thoughtful API
 
-Smol REST API with the whole CRUDL of thoughts.
+Small REST API with the whole CRUDL of real and fake thoughts.
 
-## What we've got here 
+Небольшое API с CRUDL для «мыслей» и другими ручками для авторов и тегов.
 
-* Nothing just yet :)
+## To-do
+
+- [ ] Add authentication
+
+- [ ] Add filter functionality
