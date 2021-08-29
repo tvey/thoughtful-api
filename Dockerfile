@@ -1,12 +1,14 @@
-FROM python:3.9-alpine
+FROM python:3.9.6-alpine
 
 ENV PYTHONUNBUFFERED=true
 ENV PYTHONDONTWRITEBYTECODE=true
 
 WORKDIR /app
 
-RUN pip install pipenv
-COPY Pipfile Pipfile.lock ./
-RUN pipenv install --skip-lock --system --dev
+RUN pip install --upgrade pip
+COPY ./requirements.txt .
+RUN pip install -r requirements.txt
 
 COPY . .
+
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

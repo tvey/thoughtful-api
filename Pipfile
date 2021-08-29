@@ -9,6 +9,7 @@ python-dotenv = "*"
 pytest-django = "*"
 pytest-cov = "*"
 faker = "*"
+djangorestframework-simplejwt = "*"
 
 [dev-packages]
 
