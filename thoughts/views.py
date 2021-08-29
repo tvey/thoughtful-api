@@ -1,8 +1,12 @@
 from django.db.models import Count
 from django.shortcuts import get_object_or_404
 
-from rest_framework import viewsets, generics
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework import serializers, viewsets, generics
+from rest_framework.decorators import action
+from rest_framework.permissions import (
+    IsAuthenticatedOrReadOnly,
+    IsAuthenticated,
+)
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -25,6 +29,23 @@ class ThoughtViewSet(viewsets.ModelViewSet):
     serializer_class = ThoughtSerializer
     permission_classes = [IsOwnerOrFakeOrReadOnly, IsAuthenticatedOrReadOnly]
     pagination_class = CustomizedPagination
+
+    def perform_create(self, serializer):
+        """Save the user authorized with a token as an author."""
+        serializer.save(author=self.request.user)
+
+    @action(
+        detail=False,
+        methods=['GET',],
+        permission_classes=[IsAuthenticated],
+        url_path='my',
+        url_name='my-thoughts',
+    )
+    def my_thoughts(self, request):
+        """List thoughts where an author is the authorized request user."""
+        thoughts = Thought.objects.filter(author=self.request.user)
+        serializer = ThoughtSerializer(thoughts, many=True)
+        return Response(serializer.data)
 
 
 class TagListAPIView(generics.ListAPIView):
@@ -68,16 +89,22 @@ class APIEndpoints(APIView):
         base = request.build_absolute_uri()
 
         endpoints = {
-            'List thoughts': 'thoughts',
-            'List authors': 'authors',
-            'List tags': 'tags',
-            'Create a thought': 'thoughts/new',
-            'Thought detail': 'thoughts/<int:pk>',
-            'Update a thought': 'thoughts/<int:pk>',
-            'Delete a thought': 'thoughts/<int:pk>',
-            'List thoughts by author id': 'authors/<int:pk>',
-            'List thoughts by tag id': 'tags/<int:pk>',
-            'List thoughts by tag name': 'tags/<str:name>',
+            'List thoughts': 'thoughts/',
+            'List authors': 'authors/',
+            'List tags': 'tags/',
+            'Create a thought': 'thoughts/new/',
+            'Thought detail': 'thoughts/<int:pk>/',
+            'Update a thought': 'thoughts/<int:pk>/',
+            'Delete a thought': 'thoughts/<int:pk>/',
+            'List thoughts by author id': 'authors/<int:pk>/',
+            'List thoughts by tag id': 'tags/<int:pk>/',
+            'List thoughts by tag name': 'tags/<str:name>/',
+            'List thoughts of the authenticated user': 'thoughts/my/',
+            'Register': 'register/',
+            'Obtain a token for the authorized API requests': 'token/',
+            'Refresh the token': 'token/refresh/',
+            'Login to the browsable API': 'auth/login/',
+            'Logout from the browsable API': 'auth/logout/',
         }
 
         for text, url in endpoints.items():
