@@ -1,7 +1,7 @@
 from django.db.models import Count
 from django.shortcuts import get_object_or_404
 
-from rest_framework import serializers, viewsets, generics
+from rest_framework import viewsets, generics, filters
 from rest_framework.decorators import action
 from rest_framework.permissions import (
     IsAuthenticatedOrReadOnly,
@@ -29,6 +29,8 @@ class ThoughtViewSet(viewsets.ModelViewSet):
     serializer_class = ThoughtSerializer
     permission_classes = [IsOwnerOrFakeOrReadOnly, IsAuthenticatedOrReadOnly]
     pagination_class = CustomizedPagination
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['text']
 
     def perform_create(self, serializer):
         """Save the user authorized with a token as an author."""
