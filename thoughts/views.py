@@ -1,5 +1,7 @@
+from django.conf import settings
 from django.db.models import Count
 from django.shortcuts import get_object_or_404
+from django.urls import reverse
 
 from rest_framework import viewsets, generics, filters
 from rest_framework.decorators import action
@@ -20,6 +22,7 @@ from .serializers import (
 )
 from .permissions import IsOwnerOrFakeOrReadOnly
 from .pagination import CustomizedPagination
+from .utils import get_patterns
 
 
 class ThoughtViewSet(viewsets.ModelViewSet):
@@ -38,10 +41,12 @@ class ThoughtViewSet(viewsets.ModelViewSet):
 
     @action(
         detail=False,
-        methods=['GET',],
+        methods=[
+            'GET',
+        ],
         permission_classes=[IsAuthenticated],
         url_path='my',
-        url_name='my-thoughts',
+        url_name='my',
     )
     def my_thoughts(self, request):
         """List thoughts where an author is the authorized request user."""
@@ -88,28 +93,14 @@ class APIEndpoints(APIView):
     """List all available endpoints for the API."""
 
     def get(self, request):
-        base = request.build_absolute_uri()
+        base = request.build_absolute_uri(reverse('overview'))
+        endpoints = []
 
-        endpoints = {
-            'List thoughts': 'thoughts/',
-            'List authors': 'authors/',
-            'List tags': 'tags/',
-            'Create a thought': 'thoughts/new/',
-            'Thought detail': 'thoughts/<int:pk>/',
-            'Update a thought': 'thoughts/<int:pk>/',
-            'Delete a thought': 'thoughts/<int:pk>/',
-            'List thoughts by author id': 'authors/<int:pk>/',
-            'List thoughts by tag id': 'tags/<int:pk>/',
-            'List thoughts by tag name': 'tags/<str:name>/',
-            'List thoughts of the authenticated user': 'thoughts/my/',
-            'Register': 'register/',
-            'Obtain a token for the authorized API requests': 'token/',
-            'Refresh the token': 'token/refresh/',
-            'Login to the browsable API': 'auth/login/',
-            'Logout from the browsable API': 'auth/logout/',
-        }
+        urlconf = __import__(settings.ROOT_URLCONF, {}, {}, [''])
+        urlpatterns = urlconf.urlpatterns[1:]  # exclude admin
 
-        for text, url in endpoints.items():
-            endpoints[text] = f'{base}{url}'
+        for p in get_patterns(urlpatterns):
+            pattern = ''.join(p).strip('$^')
+            endpoints.append(f'{base}{pattern}')
 
         return Response(endpoints)

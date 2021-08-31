@@ -5,5 +5,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('thoughts.urls')),
     path('', include('users.urls')),
-    path('auth/', include('rest_framework.urls')),  # login/logout for browsable
 ]
