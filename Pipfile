@@ -10,6 +10,11 @@ pytest-django = "*"
 pytest-cov = "*"
 faker = "*"
 djangorestframework-simplejwt = "*"
+gunicorn = "*"
+whitenoise = "*"
+dj-database-url = "*"
+factory-boy = "*"
+pytest-factoryboy = "*"
 
 [dev-packages]
 
