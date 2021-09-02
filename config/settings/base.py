@@ -110,6 +110,10 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+LOGIN_REDIRECT_URL = 'overview'
+LOGOUT_REDIRECT_URL = 'overview'
+
+
 # DRF Settings
 
 REST_FRAMEWORK = {
