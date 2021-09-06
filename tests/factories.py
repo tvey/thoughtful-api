@@ -5,26 +5,27 @@ import factory
 from thoughts.models import Thought, Tag, User
 
 
-class UserFactory(factory.Factory):
+class UserFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = User
 
-    username = factory.Faker('username')
+    username = factory.Faker('user_name')
+    password = factory.Faker('password')
 
 
-class TagFactory(factory.Factory):
+class TagFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = Tag
 
     name = factory.Sequence(lambda n: f'tag_{n}')
 
 
-class ThoughtFactory(factory.Factory):
+class ThoughtFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = Thought
 
-    text = factory.Faker('sentence')
     author = factory.SubFactory(UserFactory)
+    text = factory.Faker('sentence')
     is_editable = random.choice([True, False])
 
     @factory.post_generation

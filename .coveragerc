@@ -2,6 +2,7 @@
 source = .
 omit = 
     */tests/*
+    */fixtures/*
     *apps.py
     *manage.py
     *__init__.py

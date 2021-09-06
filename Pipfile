@@ -15,6 +15,7 @@ whitenoise = "*"
 dj-database-url = "*"
 factory-boy = "*"
 pytest-factoryboy = "*"
+pytest-mock = "*"
 
 [dev-packages]
 
