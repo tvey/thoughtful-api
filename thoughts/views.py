@@ -1,7 +1,6 @@
 from django.conf import settings
 from django.db.models import Count
 from django.shortcuts import get_object_or_404
-from django.urls import reverse
 
 from rest_framework import viewsets, generics, filters
 from rest_framework.decorators import action
@@ -50,9 +49,11 @@ class ThoughtViewSet(viewsets.ModelViewSet):
     )
     def my_thoughts(self, request):
         """List thoughts where an author is the authorized request user."""
-        thoughts = Thought.objects.filter(author=self.request.user)
-        serializer = ThoughtSerializer(thoughts, many=True)
-        return Response(serializer.data)
+        author = self.request.user
+        thoughts = Thought.objects.filter(author=author).order_by('-id')
+        paged_thoughts = self.paginate_queryset(thoughts)
+        serializer = self.get_serializer(paged_thoughts, many=True)
+        return self.get_paginated_response(serializer.data)
 
 
 class TagListAPIView(generics.ListAPIView):
@@ -76,8 +77,8 @@ class AuthorListAPIView(generics.ListAPIView):
 
     def get_queryset(self):
         """Return only authors who have thoughts."""
-        qs = User.objects.annotate(thought_count=Count('thought'))
-        return qs.filter(thought_count__gt=0).order_by('id')
+        authors = User.objects.annotate(thought_count=Count('thought'))
+        return authors.filter(thought_count__gt=0).order_by('id')
 
 
 class AuthorDetailAPIView(APIView):
@@ -93,7 +94,7 @@ class APIEndpoints(APIView):
     """List all available endpoints for the API."""
 
     def get(self, request):
-        base = request.build_absolute_uri(reverse('overview'))
+        base = request.build_absolute_uri()
         endpoints = []
 
         urlconf = __import__(settings.ROOT_URLCONF, {}, {}, [''])
