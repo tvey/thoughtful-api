@@ -3,6 +3,7 @@ import random
 import pytest
 from faker import Faker
 from pytest_factoryboy import register
+from rest_framework.request import Request
 from rest_framework.test import APIClient, APIRequestFactory
 from rest_framework_simplejwt.tokens import RefreshToken
 
@@ -33,13 +34,21 @@ def custom_user(db, user_factory):
 
 @pytest.fixture
 def philo_user(db, custom_user):
-    philo_username = f'philo{random.randint(1, 99)}'
+    """Dummy user who's thoughts can be updated by any authenticated user."""
+    philo_username = f'philo{random.randint(10, 99)}'
     user = custom_user(username=philo_username)
     return user
 
 
 @pytest.fixture
+def thought_fix(db, thought_factory):
+    return thought_factory()
+
+
+@pytest.fixture
 def custom_thought(db, thought_factory):
+    """Object with the ability to accept custom field data."""
+
     def create_thought(**kwargs):
         thought = thought_factory.create(**kwargs)
         return thought
@@ -49,11 +58,32 @@ def custom_thought(db, thought_factory):
 
 @pytest.fixture
 def custom_thought_batch(db, thought_factory):
+    """Batch with the ability to accept custom field data."""
+
     def create_thought_batch(size, **kwargs):
         thought = thought_factory.create_batch(size, **kwargs)
         return thought
 
     return create_thought_batch
+
+
+@pytest.fixture
+def tag_fix(db, tag_factory):
+    return tag_factory()
+
+
+@pytest.fixture
+def custom_tag(db, tag_factory):
+    def create_tag(**kwargs):
+        tag = tag_factory.create(**kwargs)
+        return tag
+
+    return create_tag
+
+
+@pytest.fixture
+def author_fix(db, author_factory):
+    return author_factory()
 
 
 @pytest.fixture
@@ -67,7 +97,8 @@ def api_client():
 
 
 @pytest.fixture
-def api_auth_client(user):
+def auth_api_client(user):
+    """Client for making authenticated requests."""
     client = APIClient()
     token = RefreshToken.for_user(user)
     access_token = str(token.access_token)
@@ -76,15 +107,11 @@ def api_auth_client(user):
 
 
 @pytest.fixture
-def custom_api_auth_client(user):
-    def create_client(user):
-        client = APIClient()
-        token = RefreshToken.for_user(user)
-        access_token = str(token.access_token)
-        client.credentials(HTTP_AUTHORIZATION=f'Bearer {access_token}')
-        return client
+def request_fix():
+    def create_request(request):
+        return Request(request)
 
-    return create_client
+    return create_request
 
 
 @pytest.fixture
