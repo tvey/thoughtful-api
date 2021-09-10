@@ -1,9 +1,12 @@
-FROM python:3.9.6-alpine
+FROM python:3.9-slim-buster
 
 ENV PYTHONUNBUFFERED=true
 ENV PYTHONDONTWRITEBYTECODE=true
 
 WORKDIR /app
+
+RUN apt-get update \
+    && apt-get -y install libpq-dev gcc
 
 RUN pip install --upgrade pip
 COPY ./requirements.txt .

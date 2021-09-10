@@ -4,7 +4,9 @@ services:
   api:
     image: thoughtful
     container_name: thoughtful
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile-local
     ports: 
       - "8001:8000"
     volumes:
