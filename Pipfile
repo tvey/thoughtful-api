@@ -16,6 +16,7 @@ dj-database-url = "*"
 factory-boy = "*"
 pytest-factoryboy = "*"
 pytest-mock = "*"
+psycopg2 = "*"
 
 [dev-packages]
 
