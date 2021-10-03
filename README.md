@@ -24,7 +24,7 @@ The list of created routes is available on the [base url](https://the-thoughtful
 
 ## Notes
 
-* Mind the trailing slashed :)
+* All visible REST deviations (base path, customized pagination etc.) are for sheer exploration and for making things look the way it was initially desired.
 
 * Get a token using a POST request with the username and password in the body
 
