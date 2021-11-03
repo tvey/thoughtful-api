@@ -1,8 +1,10 @@
+import random
+
 from django.conf import settings
 from django.db.models import Count
 from django.shortcuts import get_object_or_404
 
-from rest_framework import viewsets, generics, filters
+from rest_framework import serializers, viewsets, generics, filters
 from rest_framework.decorators import action
 from rest_framework.permissions import (
     IsAuthenticatedOrReadOnly,
@@ -54,6 +56,21 @@ class ThoughtViewSet(viewsets.ModelViewSet):
         paged_thoughts = self.paginate_queryset(thoughts)
         serializer = self.get_serializer(paged_thoughts, many=True)
         return self.get_paginated_response(serializer.data)
+
+    @action(
+        detail=False,
+        methods=[
+            'GET',
+        ],
+        url_path='random',
+        url_name='random',
+    )
+    def random(self, request):
+        """Return a random thought be a real author."""
+        thoughts = Thought.objects.filter(author__id__lte=20)
+        random_thought = random.choice(thoughts)
+        serializer = ThoughtSerializer(random_thought)
+        return Response(serializer.data)
 
 
 class TagListAPIView(generics.ListAPIView):

@@ -15,7 +15,8 @@ class TestThoughtEndpoints:
     overview_url = reverse('overview')
     thought_base_url = reverse('thought-list')
     my_list_url = reverse('thought-my')
-    batch_size = 3
+    random_thought_url = reverse('thought-random')
+    batch_size = random.randint(2, 10)
     rand_obj_index = random.randrange(batch_size)
     no_credentials_msg = 'Authentication credentials were not provided.'
     no_permission_msg = 'You do not have permission to perform this action.'
@@ -62,6 +63,16 @@ class TestThoughtEndpoints:
         response = api_client.get(self.my_list_url)
         assert response.status_code == 403
         assert response.json().get('detail') == self.no_credentials_msg
+
+    def test_random_endpoint_returns_valid_result(
+        self, api_client, custom_thought_batch
+    ):
+        custom_thought_batch(self.batch_size)
+        response = api_client.get(self.random_thought_url)
+        response_data = response.json()
+        assert response.status_code == 200
+        assert response_data.get('text')
+        assert response_data.get('author')
 
     def test_create_thought_authenticated_user(
         self, user, sentence, auth_api_client
