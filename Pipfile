@@ -5,20 +5,19 @@ name = "pypi"
 
 [packages]
 djangorestframework = "*"
-python-dotenv = "*"
+django-environ = "*"
+djangorestframework-simplejwt = "*"
+psycopg2-binary = "*"
+gunicorn = "*"
+whitenoise = "*"
+
+[dev-packages]
 pytest-django = "*"
 pytest-cov = "*"
 faker = "*"
-djangorestframework-simplejwt = "*"
-gunicorn = "*"
-whitenoise = "*"
-dj-database-url = "*"
 factory-boy = "*"
 pytest-factoryboy = "*"
 pytest-mock = "*"
-psycopg2 = "*"
-
-[dev-packages]
 
 [requires]
-python_version = "3.9"
+python_version = "3.11"
